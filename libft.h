@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 12:44:54 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/05 17:58:54 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/06 19:22:03 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int arg);
 int		ft_isascii(int c);
 int		ft_isprint(int arg);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memmove(void *str1, const void *str2, size_t n);
@@ -31,6 +31,7 @@ char	*ft_strrchr(const char *str, int c);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t num, size_t size);

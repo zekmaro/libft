@@ -19,7 +19,7 @@ fclean: clean
 
 re: fclean $(NAME)
 
-so: $(OBJ)
-	cc -shared -o libft.so $(OBJ)
+# so: $(OBJ)
+# 	cc -shared -o libft.so $(OBJ)
 
 .PHONY: all clean fclean re
