@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 14:37:45 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/04 18:54:22 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/07 14:14:34 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 static size_t	helper_strlen(const char *str)
 {
-	int len_str;
+	int	len_str;
 
 	len_str = 0;
-	while(*str)
+	while (*str)
 	{
 		len_str++;
 		str++;

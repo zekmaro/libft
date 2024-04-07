@@ -6,16 +6,16 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 10:05:20 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/05 11:53:35 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/07 14:29:23 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int helper_strlen(char const *s)
+static unsigned int	helper_strlen(char const *s)
 {
-	unsigned int i;
-	
+	unsigned int	i;
+
 	i = 0;
 	if (s == NULL)
 		return (0);
@@ -44,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	temp_substr = substr;
 	s += start;
-	while(len && *s)
+	while (len && *s)
 	{
 		*substr++ = *s++;
 		len--;

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 15:31:40 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/07 13:36:03 by anarama          ###   ########.fr       */
+/*   Created: 2024/04/07 13:14:43 by anarama           #+#    #+#             */
+/*   Updated: 2024/04/07 14:28:26 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*temp_str;
-
-	temp_str = (char *)str;
-	while (n--)
-		*temp_str++ = c;
-	return (str);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

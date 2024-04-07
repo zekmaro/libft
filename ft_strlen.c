@@ -6,11 +6,13 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 15:29:36 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/03 12:07:56 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/07 12:01:06 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

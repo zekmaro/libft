@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:58:11 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/04 19:26:10 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/07 14:20:27 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static const char	*skip_spaces(const char *str)
 {
-	while (*str == ' ' || *str == '\t' || *str == '\n' ||
-			*str == '\r' || *str == '\f' || *str == '\v')
+	while (*str == ' ' || *str == '\t' || *str == '\n'
+		|| *str == '\r' || *str == '\f' || *str == '\v')
 		str++;
 	return (str);
 }

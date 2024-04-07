@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 15:55:50 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/04 17:45:09 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/07 13:35:49 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	const unsigned char *temp_str1;
-	const unsigned char *temp_str2;
+	const unsigned char	*temp_str1;
+	const unsigned char	*temp_str2;
 
 	temp_str1 = (const unsigned char *)str1;
 	temp_str2 = (const unsigned char *)str2;
