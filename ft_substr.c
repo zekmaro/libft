@@ -27,18 +27,27 @@ static unsigned int	helper_strlen(char const *s)
 	return (i);
 }
 
+static char	*get_empty_str(void)
+{
+	char	*str;
+
+	str = (char *)malloc(1);
+	if (str)
+		*str = '\0';
+	return (str);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	char	*temp_substr;
+	size_t	len_s;
 
-	if (s == NULL || start >= helper_strlen(s) || len == 0)
-	{
-		substr = (char *)malloc(1);
-		if (substr)
-			*substr = '\0';
-		return (substr);
-	}
+	len_s = helper_strlen(s);
+	if (s == NULL || start >= len_s || len == 0)
+		returnn(get_empty_str());
+	if (len > len_s)
+		len = len_s;
 	substr = (char *)malloc(sizeof(char) * len + 1);
 	if (!substr)
 		return (NULL);

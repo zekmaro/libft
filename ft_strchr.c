@@ -14,19 +14,16 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	char	*chr_address;
+	unsigned char	unsigned_c;
 
-	chr_address = NULL;
+	unsigned_c = (unsigned char)c;
 	while (*str)
 	{
-		if (*str == c)
-		{
-			chr_address = (char *)str;
-			return (chr_address);
-		}
+		if ((unsigned char)(*str) == unsigned_c)
+			return ((char *)str);
 		str++;
 	}
-	if (c == '\0')
-		chr_address = (char *)str;
-	return (chr_address);
+	if (unsigned_c == '\0')
+		return ((char *)str);
+	return (NULL);
 }

@@ -14,16 +14,18 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	*chr_address;
+	char			*last_addr_c;
+	unsigned char	unsigned_c;
 
-	chr_address = NULL;
+	last_addr_c = NULL;
+	unsigned_c = (unsigned char)c;
 	while (*str)
 	{
-		if (*str == c)
-			chr_address = (char *)str;
+		if ((unsigned char)(*str) == unsigned_c)
+			last_addr_c = (char *)str;
 		str++;
 	}
-	if (c == '\0')
-		chr_address = (char *)str;
-	return (chr_address);
+	if (unsigned_c == '\0')
+		return ((char *)str);
+	return (last_addr_c);
 }
