@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	int	helper_count_words(char const *s, char c)
+static	int	count_words(char const *s, char c)
 {
 	int	count_words;
 
@@ -28,12 +28,12 @@ static	int	helper_count_words(char const *s, char c)
 	return (count_words);
 }
 
-static	int	helper_len_substr(const char *s, char c)
+static int	helper_len_substr(const char *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while (*s != c)
+	while (*s && *s != c)
 	{
 		i++;
 		s++;
@@ -41,31 +41,68 @@ static	int	helper_len_substr(const char *s, char c)
 	return (i);
 }
 
+static void free_memory(char **arr)
+{
+	char **temp;
+
+	temp = arr;
+	while (*arr)
+	{
+		free(*arr);
+		arr++;
+	}
+	free(temp);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int		count_words;
 	char	**temp_arr;
 
 	if (s == NULL)
 		return (NULL);
-	count_words = helper_count_words(s, c);
-	arr = (char **)malloc(sizeof(char *) * (count_words + 1));
-	if (!arr)
-		return (NULL);
+	arr = (char **)ft_calloc(sizeof(char *), count_words(s, c) + 1);
 	temp_arr = arr;
-	while (*s)
+	while (arr && *s)
 	{
 		while (*s == c && *s)
 			s++;
 		if (*s != '\0')
 		{
 			*arr = ft_substr(s, 0, helper_len_substr(s, c));
+			if (!*arr)
+				return (free_memory(temp_arr), NULL);
 			arr++;
 		}
 		while (*s != c && *s)
 			s++;
 	}
-	*arr = NULL;
 	return (temp_arr);
 }
+
+// #include <stdio.h>
+
+// int main(int argc, char **v)
+// {
+// 	(void) argc;
+// 	char *str = v[1];
+// 	char c = v[2][0];
+// 	char **arr;
+// 	char **temp;
+
+// 	arr = ft_split(str, c);
+// 	if (arr == NULL) {
+// 		printf("NULL returned");
+// 		return (1);
+// 	}
+// 	temp = arr;
+// 	while (*arr)
+// 	{
+// 		printf("{%s}", *arr);
+// 		free(*arr);
+// 		arr++;
+// 	}
+// 	free(temp);
+// 	printf("\n");
+// }
+

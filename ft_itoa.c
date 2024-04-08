@@ -39,6 +39,8 @@ static	char	*handle_int_min(void)
 	char	*str;
 
 	str = (char *)malloc(sizeof(char) * 11 + 1);
+	if (!str)
+		return (NULL);
 	str = ft_memcpy(str, "-2147483648", 11);
 	*(str + 11) = '\0';
 	return (str);

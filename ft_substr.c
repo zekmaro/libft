@@ -45,9 +45,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	len_s = helper_strlen(s);
 	if (s == NULL || start >= len_s || len == 0)
-		returnn(get_empty_str());
-	if (len > len_s)
-		len = len_s;
+		return (get_empty_str());
+	if (len + start > len_s)
+		len = len_s - start;
 	substr = (char *)malloc(sizeof(char) * len + 1);
 	if (!substr)
 		return (NULL);
