@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 10:30:43 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/04 10:57:34 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/08 20:56:34 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,11 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		len_s;
-	char	*dup_s;
-	char	*temp_s;
-	char	*temp_dup_s;
+	size_t		len_s;
+	char		*dup_s;
+	char		*temp_dup_s;
 
-	len_s = 0;
-	temp_s = (char *)s;
-	while (*s)
-	{
-		len_s++;
-		s++;
-	}
-	s = temp_s;
+	len_s = ft_strlen(s);
 	dup_s = (char *)malloc(sizeof(char) * len_s + 1);
 	if (!dup_s)
 		return (NULL);

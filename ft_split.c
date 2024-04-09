@@ -6,13 +6,13 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 16:07:22 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/07 13:54:11 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/09 12:13:57 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	count_words;
 
@@ -41,9 +41,9 @@ static int	helper_len_substr(const char *s, char c)
 	return (i);
 }
 
-static void free_memory(char **arr)
+static void	free_memory(char **arr)
 {
-	char **temp;
+	char	**temp;
 
 	temp = arr;
 	while (*arr)
@@ -79,30 +79,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (temp_arr);
 }
-
-// #include <stdio.h>
-
-// int main(int argc, char **v)
-// {
-// 	(void) argc;
-// 	char *str = v[1];
-// 	char c = v[2][0];
-// 	char **arr;
-// 	char **temp;
-
-// 	arr = ft_split(str, c);
-// 	if (arr == NULL) {
-// 		printf("NULL returned");
-// 		return (1);
-// 	}
-// 	temp = arr;
-// 	while (*arr)
-// 	{
-// 		printf("{%s}", *arr);
-// 		free(*arr);
-// 		arr++;
-// 	}
-// 	free(temp);
-// 	printf("\n");
-// }
-

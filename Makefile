@@ -21,9 +21,6 @@ fclean: clean
 
 re: fclean $(NAME)
 
-so: $(OBJ)
-	cc -shared -o libft.so $(OBJ)
-
 bonus: $(OBJ) $(BNS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BNS_OBJ)
 
